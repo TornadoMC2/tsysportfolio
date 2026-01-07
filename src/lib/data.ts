@@ -130,7 +130,7 @@ export const skills = [
 ];
 
 export const socialLinks = {
-    github: "https://github.com/your-username", // Update this
-    linkedin: "https://linkedin.com/in/your-profile", // Update this
+    github: "https://github.com/TornadoMC2", // Update thisa
+    linkedin: "https://linkedin.com/in/hjohanson", // Update this
     email: "hcjohan@ilstu.edu"
 };
