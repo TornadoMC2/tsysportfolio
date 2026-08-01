@@ -94,11 +94,57 @@ body {
   margin-bottom: 0.5rem;
 }
 
+.prose-custom strong {
+  color: #f1f5f9;
+  font-weight: 600;
+}
+
 .prose-custom code {
   background: rgba(6, 182, 212, 0.1);
-  padding: 0.25rem 0.5rem;
+  color: #67e8f9;
+  padding: 0.15rem 0.4rem;
   border-radius: 0.25rem;
+  font-family: var(--font-mono), ui-monospace, monospace;
   font-size: 0.875rem;
+}
+
+/* Fenced code blocks: the inline `code` chip styling must not apply inside. */
+.prose-custom pre {
+  background: rgba(2, 6, 23, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  overflow-x: auto;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.prose-custom pre code {
+  background: none;
+  color: #cbd5e1;
+  padding: 0;
+  border-radius: 0;
+  font-size: inherit;
+}
+
+.prose-custom table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.prose-custom th,
+.prose-custom td {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.6rem 0.85rem;
+  text-align: left;
+}
+
+.prose-custom th {
+  background: rgba(255, 255, 255, 0.04);
+  color: #e2e8f0;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-weight: 600;
 }
 
 /* Portal page animations - lightweight CSS-only */
@@ -153,4 +199,48 @@ body {
 .animation-delay-500 {
   animation-delay: 0.5s;
   opacity: 0;
+}
+
+/* Skills marquee. The track holds two copies of the list, so translating by
+   -50% lands exactly on the start of the second copy — seamless at any width. */
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee-scroll 45s linear infinite;
+  will-change: transform;
+}
+
+.marquee:hover .marquee-track,
+.marquee:focus-within .marquee-track {
+  animation-play-state: paused;
+}
+
+/* Respect the OS setting: hold everything still rather than looping or
+   fading content in from opacity: 0 and leaving it invisible. */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+
+  .animate-fade-in-up,
+  .animate-fade-in {
+    animation: none;
+    opacity: 1;
+  }
+
+  .animation-delay-100,
+  .animation-delay-200,
+  .animation-delay-300,
+  .animation-delay-400,
+  .animation-delay-500 {
+    animation-delay: 0s;
+    opacity: 1;
+  }
 }

@@ -1,0 +1,64 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Isometric server blocks representing containerized game server instances">
+  <defs>
+    <linearGradient id="mc-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#mc-bg)"/>
+  <ellipse cx="400" cy="340" rx="330" ry="220" fill="#0891b2" opacity="0.10"/>
+
+  <!-- Isometric stack: each block = one containerized instance -->
+  <g stroke="#0e7490" stroke-width="2" stroke-linejoin="round">
+    <!-- bottom row -->
+    <g transform="translate(260 380)">
+      <path d="M0 40 L70 0 L140 40 L70 80 Z" fill="#0e7490" opacity="0.85"/>
+      <path d="M0 40 L70 80 L70 140 L0 100 Z" fill="#083344"/>
+      <path d="M140 40 L70 80 L70 140 L140 100 Z" fill="#0c2c3d"/>
+    </g>
+    <g transform="translate(400 380)">
+      <path d="M0 40 L70 0 L140 40 L70 80 Z" fill="#0e7490" opacity="0.85"/>
+      <path d="M0 40 L70 80 L70 140 L0 100 Z" fill="#083344"/>
+      <path d="M140 40 L70 80 L70 140 L140 100 Z" fill="#0c2c3d"/>
+    </g>
+    <!-- middle row -->
+    <g transform="translate(330 300)">
+      <path d="M0 40 L70 0 L140 40 L70 80 Z" fill="#22d3ee" opacity="0.8"/>
+      <path d="M0 40 L70 80 L70 140 L0 100 Z" fill="#0e7490"/>
+      <path d="M140 40 L70 80 L70 140 L140 100 Z" fill="#0b5a6b"/>
+    </g>
+    <!-- top -->
+    <g transform="translate(330 220)">
+      <path d="M0 40 L70 0 L140 40 L70 80 Z" fill="#67e8f9" opacity="0.9"/>
+      <path d="M0 40 L70 80 L70 140 L0 100 Z" fill="#155e75"/>
+      <path d="M140 40 L70 80 L70 140 L140 100 Z" fill="#0e7490"/>
+    </g>
+  </g>
+
+  <!-- Player connections -->
+  <g fill="none" stroke="#22d3ee" stroke-width="2" stroke-dasharray="6 6" opacity="0.6">
+    <path d="M120 150 C 220 180, 300 210, 372 244"/>
+    <path d="M680 150 C 580 180, 500 210, 428 244"/>
+    <path d="M100 420 C 180 400, 230 390, 262 400"/>
+  </g>
+  <g fill="#0f172a" stroke="#0e7490" stroke-width="2">
+    <circle cx="120" cy="150" r="22"/>
+    <circle cx="680" cy="150" r="22"/>
+    <circle cx="100" cy="420" r="22"/>
+  </g>
+  <g fill="#22d3ee">
+    <circle cx="120" cy="144" r="6"/><path d="M108 164a12 12 0 0 1 24 0z"/>
+    <circle cx="680" cy="144" r="6"/><path d="M668 164a12 12 0 0 1 24 0z"/>
+    <circle cx="100" cy="414" r="6"/><path d="M88 434a12 12 0 0 1 24 0z"/>
+  </g>
+
+  <!-- Ingress label -->
+  <g transform="translate(556 402)" font-family="monospace">
+    <rect width="190" height="72" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="2"/>
+    <text x="18" y="30" font-size="12" fill="#64748b">ingress</text>
+    <text x="18" y="52" font-size="13" fill="#67e8f9">VPS → WireGuard</text>
+  </g>
+
+  <text x="400" y="566" font-family="monospace" font-size="13" fill="#475569" text-anchor="middle" letter-spacing="3">CONTAINERIZED GAME SERVERS</text>
+</svg>
