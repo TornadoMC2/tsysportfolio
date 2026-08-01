@@ -116,6 +116,15 @@ export default function WelcomePage() {
           <p className="mt-4 text-sm text-slate-500">
             Enjoy your stay! 🚀
           </p>
+          <p className="mt-6 text-xs text-slate-600">
+            Guest devices are on their own isolated VLAN.{" "}
+            <a
+              href="https://tsys.dev/projects/guest-network-portal"
+              className="underline underline-offset-4 hover:text-cyan-400 transition-colors"
+            >
+              How this network is built
+            </a>
+          </p>
         </div>
       </div>
     </div>

@@ -1,6 +1,72 @@
-﻿<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
-  <rect width="100%" height="100%" fill="#0f172a"/>
-  <rect x="50" y="50" width="700" height="500" rx="10" fill="#1e293b" stroke="#334155" stroke-width="2"/>
-  <text x="400" y="280" font-family="monospace" font-size="32" fill="#22d3ee" text-anchor="middle">Tornado Audio</text>
-  <text x="400" y="330" font-family="monospace" font-size="18" fill="#94a3b8" text-anchor="middle">Audio Engineering</text>
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Audio waveform and mixing console faders">
+  <defs>
+    <linearGradient id="ta-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="ta-wave" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0e7490"/>
+      <stop offset="50%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#0e7490"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#ta-bg)"/>
+  <ellipse cx="400" cy="300" rx="380" ry="220" fill="#0891b2" opacity="0.10"/>
+
+  <!-- Centre line -->
+  <path d="M60 300h680" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Waveform -->
+  <g fill="url(#ta-wave)">
+    <rect x="60" y="286" width="6" height="28" rx="3"/>
+    <rect x="76" y="266" width="6" height="68" rx="3"/>
+    <rect x="92" y="240" width="6" height="120" rx="3"/>
+    <rect x="108" y="212" width="6" height="176" rx="3"/>
+    <rect x="124" y="252" width="6" height="96" rx="3"/>
+    <rect x="140" y="180" width="6" height="240" rx="3"/>
+    <rect x="156" y="228" width="6" height="144" rx="3"/>
+    <rect x="172" y="150" width="6" height="300" rx="3"/>
+    <rect x="188" y="204" width="6" height="192" rx="3"/>
+    <rect x="204" y="252" width="6" height="96" rx="3"/>
+    <rect x="220" y="168" width="6" height="264" rx="3"/>
+    <rect x="236" y="222" width="6" height="156" rx="3"/>
+    <rect x="252" y="126" width="6" height="348" rx="3"/>
+    <rect x="268" y="192" width="6" height="216" rx="3"/>
+    <rect x="284" y="246" width="6" height="108" rx="3"/>
+    <rect x="300" y="162" width="6" height="276" rx="3"/>
+    <rect x="316" y="216" width="6" height="168" rx="3"/>
+    <rect x="332" y="138" width="6" height="324" rx="3"/>
+    <rect x="348" y="198" width="6" height="204" rx="3"/>
+    <rect x="364" y="258" width="6" height="84" rx="3"/>
+    <rect x="380" y="174" width="6" height="252" rx="3"/>
+    <rect x="396" y="234" width="6" height="132" rx="3"/>
+    <rect x="412" y="144" width="6" height="312" rx="3"/>
+    <rect x="428" y="210" width="6" height="180" rx="3"/>
+    <rect x="444" y="264" width="6" height="72" rx="3"/>
+    <rect x="460" y="186" width="6" height="228" rx="3"/>
+    <rect x="476" y="240" width="6" height="120" rx="3"/>
+    <rect x="492" y="156" width="6" height="288" rx="3"/>
+    <rect x="508" y="222" width="6" height="156" rx="3"/>
+    <rect x="524" y="270" width="6" height="60" rx="3"/>
+    <rect x="540" y="198" width="6" height="204" rx="3"/>
+    <rect x="556" y="252" width="6" height="96" rx="3"/>
+    <rect x="572" y="180" width="6" height="240" rx="3"/>
+    <rect x="588" y="234" width="6" height="132" rx="3"/>
+    <rect x="604" y="276" width="6" height="48" rx="3"/>
+    <rect x="620" y="216" width="6" height="168" rx="3"/>
+    <rect x="636" y="258" width="6" height="84" rx="3"/>
+    <rect x="652" y="228" width="6" height="144" rx="3"/>
+    <rect x="668" y="270" width="6" height="60" rx="3"/>
+    <rect x="684" y="246" width="6" height="108" rx="3"/>
+    <rect x="700" y="282" width="6" height="36" rx="3"/>
+    <rect x="716" y="264" width="6" height="72" rx="3"/>
+    <rect x="732" y="288" width="6" height="24" rx="3"/>
+  </g>
+
+  <!-- Playhead -->
+  <path d="M332 100v400" stroke="#e2e8f0" stroke-width="2" opacity="0.6"/>
+  <circle cx="332" cy="100" r="6" fill="#e2e8f0"/>
+
+  <text x="400" y="548" font-family="monospace" font-size="14" fill="#64748b" text-anchor="middle" letter-spacing="4">MIXING · MASTERING</text>
 </svg>
